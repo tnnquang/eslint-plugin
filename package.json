@@ -1,6 +1,6 @@
 {
   "name": "@tnnquang/eslint",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ESLint plugin with custom rules for TypeScript frameworks (React, Vue, Angular, NestJS, Next.js, Nuxt)",
   "keywords": [
     "eslint",
@@ -34,7 +34,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest --passWithNoTests",
-    "lint": "eslint lib/",
+    "lint": "eslint lib/ --config eslint.config.dev.js",
     "prepublishOnly": "npm run lint && npm test"
   },
   "peerDependencies": {

@@ -1,0 +1,17 @@
+# Development files that shouldn't be published
+.eslintrc.js
+eslint.config.js
+test-*.js
+examples/
+docs/
+*.test.js
+*.spec.js
+.github/
+.vscode/
+coverage/
+.nyc_output/
+*.tgz
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store

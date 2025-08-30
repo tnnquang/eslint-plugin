@@ -379,6 +379,36 @@ The `no-namespace-import` rule works with **any JavaScript library**:
 
 MIT
 
+## Troubleshooting
+
+### ESLint Configuration Conflicts
+
+If you encounter ESLint configuration conflicts:
+
+1. **Make sure you don't have conflicting configs**: This plugin doesn't include any `.eslintrc.js` files that could interfere with your project.
+
+2. **Plugin loading issues**: Ensure the plugin is properly installed:
+   ```bash
+   npm ls @tnnquang/eslint
+   ```
+
+3. **Rule conflicts**: If you have other ESLint plugins with similar rules, you can disable specific rules:
+   ```json
+   {
+     "rules": {
+       "@tnnquang/eslint/no-arrow-components": "off"
+     }
+   }
+   ```
+
+4. **TypeScript integration**: For TypeScript projects, make sure you have proper parser configuration:
+   ```json
+   {
+     "parser": "@typescript-eslint/parser",
+     "plugins": ["@typescript-eslint", "@tnnquang/eslint"]
+   }
+   ```
+
 ## Contributing
 
 Issues and pull requests are welcome!
@@ -386,6 +416,12 @@ Issues and pull requests are welcome!
 Repository: [https://github.com/tnnquang/eslint-plugin](https://github.com/tnnquang/eslint-plugin)
 
 ## Changelog
+
+### v2.0.1
+
+- **Fixed Configuration Conflicts**: Removed internal ESLint config files from npm package to prevent conflicts with user configurations
+- Added `.npmignore` to exclude development files
+- Added troubleshooting section to README
 
 ### v2.0.0
 
